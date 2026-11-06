@@ -5,6 +5,7 @@
 //  Created by Lorenzo Pichilli on 21/05/23.
 //
 
+import Flutter
 import Foundation
 
 public class InAppBrowserMenuItem: NSObject {

@@ -5,6 +5,7 @@
 //  Created by Lorenzo Pichilli on 07/10/22.
 //
 
+import Flutter
 import Foundation
 
 public class FindInteractionChannelDelegate: ChannelDelegate {
