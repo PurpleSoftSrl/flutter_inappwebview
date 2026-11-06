@@ -1,6 +1,5 @@
-import 'package:build/src/builder/build_step.dart';
+import 'package:build/build.dart';
 import 'package:analyzer/dart/element/element.dart';
-import 'package:analyzer/dart/analysis/results.dart';
 import 'package:source_gen/source_gen.dart';
 import 'package:flutter_inappwebview_internal_annotations/flutter_inappwebview_internal_annotations.dart';
 import 'package:analyzer/dart/constant/value.dart';
@@ -9,10 +8,13 @@ import 'model_visitor.dart';
 import 'util.dart';
 
 final _coreCheckerEnumSupportedPlatforms =
-    const TypeChecker.fromRuntime(EnumSupportedPlatforms);
-final _coreCheckerDeprecated = const TypeChecker.fromRuntime(Deprecated);
+    const TypeChecker.typeNamed(EnumSupportedPlatforms,
+        inPackage: internalAnnotationsPackage);
+final _coreCheckerDeprecated =
+    const TypeChecker.typeNamed(Deprecated, inPackage: 'core', inSdk: true);
 final _coreCheckerEnumCustomValue =
-    const TypeChecker.fromRuntime(ExchangeableEnumCustomValue);
+    const TypeChecker.typeNamed(ExchangeableEnumCustomValue,
+        inPackage: internalAnnotationsPackage);
 
 class ExchangeableEnumGenerator
     extends GeneratorForAnnotation<ExchangeableEnum> {
@@ -21,9 +23,9 @@ class ExchangeableEnumGenerator
       Element element, ConstantReader annotation, BuildStep buildStep) {
     final visitor = ModelVisitor();
     // Visits all the children of element in no particular order.
-    element.visitChildren(visitor);
+    visitChildrenIncludingConstructors(element, visitor);
 
-    final className = visitor.constructor.returnType.element.name;
+    final className = visitor.constructor.returnType.element.name!;
     // remove "_" to generate the correct class name
     final extClassName = className.replaceFirst("_", "");
 
@@ -39,7 +41,7 @@ class ExchangeableEnumGenerator
     if (classSupportedDocs != null) {
       classBuffer.writeln(classSupportedDocs);
     }
-    if (visitor.constructor.returnType.element.hasDeprecated) {
+    if (visitor.constructor.returnType.element.metadata.hasDeprecated) {
       classBuffer.writeln(
           "@Deprecated('${_coreCheckerDeprecated.firstAnnotationOfExact(visitor.constructor.returnType.element)?.getField("message")?.toStringValue()}')");
     }
@@ -77,14 +79,8 @@ class ExchangeableEnumGenerator
       final isEnumCustomValue = _coreCheckerEnumCustomValue
           .firstAnnotationOf(fieldElement) != null;
       if (isEnumCustomValue) {
-        ParsedLibraryResult parsed = fieldElement.session
-            ?.getParsedLibraryByElement(fieldElement.library)
-            as ParsedLibraryResult;
-        final fieldBody = parsed
-            .getElementDeclaration(fieldElement)
-            ?.node
-            .toString()
-            .replaceAll(className, extClassName);
+        final fieldBody = Util.getElementDeclarationCode(fieldElement)
+            ?.replaceAll(className, extClassName);
         if (fieldBody != null) {
           final docs = fieldElement.documentationComment;
           if (docs != null) {
@@ -248,10 +244,8 @@ class ExchangeableEnumGenerator
       if (Util.methodHasIgnore(methodElement)) {
         continue;
       }
-      ParsedLibraryResult parsed = methodElement.session?.getParsedLibraryByElement(methodElement.library) as ParsedLibraryResult;
-      final methodBody = parsed.getElementDeclaration(methodElement)?.node
-          .toString()
-          .replaceAll(className, extClassName);
+      final methodBody = Util.getElementDeclarationCode(methodElement)
+          ?.replaceAll(className, extClassName);
       if (methodBody != null) {
         final docs = methodElement.documentationComment;
         if (docs != null) {

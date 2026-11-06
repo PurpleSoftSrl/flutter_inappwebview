@@ -8,10 +8,10 @@ part of 'chrome_safari_action_button.dart';
 
 ///Class that represents a custom action button for a [PlatformChromeSafariBrowser] instance.
 ///
-///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
 ///
 ///**Officially Supported Platforms/Implementations**:
-///- Android native WebView
+///- Android WebView
 class ChromeSafariBrowserActionButton {
   ///Use onClick instead.
   @Deprecated('Use onClick instead')
@@ -33,10 +33,10 @@ class ChromeSafariBrowserActionButton {
   bool shouldTint;
 
   ///
-  ///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+  ///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   ChromeSafariBrowserActionButton(
       {required this.id,
       required this.icon,

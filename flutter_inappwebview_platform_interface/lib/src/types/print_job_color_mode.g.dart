@@ -19,8 +19,8 @@ class PrintJobColorMode {
   ///Color color scheme, for example many colors are used.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- MacOS
+  ///- Android WebView
+  ///- macOS WKWebView
   static final COLOR = PrintJobColorMode._internalMultiPlatform(2, () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -36,8 +36,8 @@ class PrintJobColorMode {
   ///Monochrome color scheme, for example one color is used.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- MacOS
+  ///- Android WebView
+  ///- macOS WKWebView
   static final MONOCHROME = PrintJobColorMode._internalMultiPlatform(1, () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:

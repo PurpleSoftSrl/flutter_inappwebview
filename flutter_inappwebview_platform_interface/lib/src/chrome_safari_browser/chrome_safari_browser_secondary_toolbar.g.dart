@@ -15,10 +15,10 @@ part of 'chrome_safari_browser_secondary_toolbar.dart';
 ///RemoteViews has limited to support to Android layouts.
 ///Check the [RemoteViews Official API](https://developer.android.com/reference/android/widget/RemoteViews.html) for more details.
 ///
-///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
 ///
 ///**Officially Supported Platforms/Implementations**:
-///- Android native WebView
+///- Android WebView
 class ChromeSafariBrowserSecondaryToolbar {
   ///The IDs of clickable views. The `onClick` event of these views will be handled by custom tabs.
   List<ChromeSafariBrowserSecondaryToolbarClickableID> clickableIDs;
@@ -27,10 +27,10 @@ class ChromeSafariBrowserSecondaryToolbar {
   AndroidResource layout;
 
   ///
-  ///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+  ///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   ChromeSafariBrowserSecondaryToolbar(
       {this.clickableIDs = const [], required this.layout});
 
@@ -72,10 +72,10 @@ class ChromeSafariBrowserSecondaryToolbar {
 
 ///Class that represents a clickable ID item of the secondary toolbar for a [PlatformChromeSafariBrowser] instance.
 ///
-///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
 ///
 ///**Officially Supported Platforms/Implementations**:
-///- Android native WebView
+///- Android WebView
 class ChromeSafariBrowserSecondaryToolbarClickableID {
   ///The android id resource
   AndroidResource id;
@@ -84,10 +84,10 @@ class ChromeSafariBrowserSecondaryToolbarClickableID {
   void Function(WebUri?)? onClick;
 
   ///
-  ///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+  ///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   ChromeSafariBrowserSecondaryToolbarClickableID(
       {required this.id, this.onClick});
 

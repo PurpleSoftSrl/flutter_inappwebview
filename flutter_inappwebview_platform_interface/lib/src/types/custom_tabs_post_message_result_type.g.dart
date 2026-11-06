@@ -21,7 +21,7 @@ class CustomTabsPostMessageResultType {
   ///or requesting at a disallowed time like when in background.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   static final FAILURE_DISALLOWED =
       CustomTabsPostMessageResultType._internalMultiPlatform(-1, () {
     switch (defaultTargetPlatform) {
@@ -36,7 +36,7 @@ class CustomTabsPostMessageResultType {
   ///Indicates that the postMessage request has failed due to an internal error on the browser message channel.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   static final FAILURE_MESSAGING_ERROR =
       CustomTabsPostMessageResultType._internalMultiPlatform(-3, () {
     switch (defaultTargetPlatform) {
@@ -51,7 +51,7 @@ class CustomTabsPostMessageResultType {
   ///Indicates that the postMessage request has failed due to a `RemoteException`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   static final FAILURE_REMOTE_ERROR =
       CustomTabsPostMessageResultType._internalMultiPlatform(-2, () {
     switch (defaultTargetPlatform) {
@@ -66,7 +66,7 @@ class CustomTabsPostMessageResultType {
   ///Indicates that the postMessage request was accepted.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   static final SUCCESS =
       CustomTabsPostMessageResultType._internalMultiPlatform(0, () {
     switch (defaultTargetPlatform) {

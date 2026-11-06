@@ -24,7 +24,7 @@ class ClientCertResponse {
   ///An Android-specific property used by Java [KeyStore](https://developer.android.com/reference/java/security/KeyStore) class to get the instance.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   String? keyStoreType;
   ClientCertResponse(
       {required this.certificatePath,

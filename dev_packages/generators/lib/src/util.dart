@@ -1,12 +1,16 @@
+import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/element/element.dart';
-import 'package:source_gen/source_gen.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/dart/element/nullability_suffix.dart';
 import 'package:analyzer/dart/constant/value.dart';
+import 'package:source_gen/source_gen.dart';
 import 'package:flutter_inappwebview_internal_annotations/flutter_inappwebview_internal_annotations.dart';
 
-final _coreCheckerObjectMethod =
-    const TypeChecker.fromRuntime(ExchangeableObjectMethod);
+const internalAnnotationsPackage = 'flutter_inappwebview_internal_annotations';
+
+final _coreCheckerObjectMethod = const TypeChecker.typeNamed(
+    ExchangeableObjectMethod,
+    inPackage: internalAnnotationsPackage);
 
 abstract class Util {
   static bool typeIsNullable(DartType type) {
@@ -20,6 +24,24 @@ abstract class Util {
             ?.getField("ignore")
             ?.toBoolValue() ==
         true;
+  }
+
+  /// The source code of the declaration of [element], or `null` if it is
+  /// synthetic.
+  static String? getElementDeclarationCode(Element element) {
+    final session = element.session!;
+    final library = element.library!;
+    final parsed = session.getParsedLibraryByElement(library);
+    if (parsed is! ParsedLibraryResult) {
+      return null;
+    }
+    return parsed.getFragmentDeclaration(element.firstFragment)?.node.toString();
+  }
+
+  /// The presentation of [type] without nullability suffixes.
+  static String getDisplayStringWithoutNullability(DartType type) {
+    // ignore: deprecated_member_use
+    return type.getDisplayString(withNullability: false);
   }
 
   static String? getSupportedDocs(TypeChecker checker, Element element) {

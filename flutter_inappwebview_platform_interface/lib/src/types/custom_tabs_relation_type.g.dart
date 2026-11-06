@@ -19,7 +19,7 @@ class CustomTabsRelationType {
   ///Requests the ability to handle all URLs from a given origin.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   static final HANDLE_ALL_URLS =
       CustomTabsRelationType._internalMultiPlatform(2, () {
     switch (defaultTargetPlatform) {
@@ -34,7 +34,7 @@ class CustomTabsRelationType {
   ///For App -> Web transitions, requests the app to use the declared origin to be used as origin for the client app in the web APIs context.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   static final USE_AS_ORIGIN =
       CustomTabsRelationType._internalMultiPlatform(1, () {
     switch (defaultTargetPlatform) {

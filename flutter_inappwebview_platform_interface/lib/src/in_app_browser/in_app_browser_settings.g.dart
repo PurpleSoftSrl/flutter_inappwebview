@@ -12,197 +12,197 @@ class InAppBrowserSettings
   ///Set to `false` to block the InAppBrowser WebView going back when the user click on the Android back button. The default value is `true`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   bool? allowGoBackWithBackButton;
 
   ///Set the custom text for the close button.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   String? closeButtonCaption;
 
   ///Set the custom color for the close button.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   Color? closeButtonColor;
 
   ///Set to `false` to not close the InAppBrowser when the user click on the Android back button and the WebView cannot go back to the history. The default value is `true`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   bool? closeOnCannotGoBack;
 
   ///Set to `true` to create the browser and load the page, but not show it. Omit or set to `false` to have the browser open and load normally.
   ///The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
-  ///- MacOS
-  ///- Windows
+  ///- Android WebView
+  ///- iOS WKWebView
+  ///- macOS WKWebView
+  ///- Windows WebView2
   bool? hidden;
 
   ///Set to `true` to hide the close button. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   bool? hideCloseButton;
 
   ///Set to `true` to hide the default menu items. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
-  ///- MacOS
+  ///- Android WebView
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   bool? hideDefaultMenuItems;
 
   ///Set to `true` to hide the progress bar when the WebView is loading a page. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
-  ///- MacOS
+  ///- Android WebView
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   bool? hideProgressBar;
 
   ///Set to `true` if you want the title should be displayed. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   bool? hideTitleBar;
 
   ///Set to `true` to hide the toolbar at the bottom of the WebView. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   bool? hideToolbarBottom;
 
   ///Set to `true` to hide the toolbar at the top of the WebView. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
-  ///- MacOS
+  ///- Android WebView
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   bool? hideToolbarTop;
 
   ///Set to `true` to hide the url bar on the toolbar at the top. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
-  ///- MacOS
+  ///- Android WebView
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   bool? hideUrlBar;
 
   ///Set the custom color for the menu button.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   Color? menuButtonColor;
 
   ///Set the custom modal presentation style when presenting the WebView. The default value is [ModalPresentationStyle.FULL_SCREEN].
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   ModalPresentationStyle? presentationStyle;
 
   ///Set to `true` to close the InAppBrowser when the user click on the Android back button. The default value is `false`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
+  ///- Android WebView
   bool? shouldCloseOnBackButtonPressed;
 
   ///Set the custom background color of the toolbar at the bottom.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   Color? toolbarBottomBackgroundColor;
 
   ///Set the tint color to apply to the bar button items.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   Color? toolbarBottomTintColor;
 
   ///Set to `true` to set the toolbar at the bottom translucent. The default value is `true`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   bool? toolbarBottomTranslucent;
 
   ///Set the custom background color of the toolbar at the top.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
-  ///- MacOS
+  ///- Android WebView
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   Color? toolbarTopBackgroundColor;
 
   ///Set the tint color to apply to the navigation bar background.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   Color? toolbarTopBarTintColor;
 
   ///Set the action bar's title.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- MacOS
-  ///- Windows
+  ///- Android WebView
+  ///- macOS WKWebView
+  ///- Windows WebView2
   String? toolbarTopFixedTitle;
 
   ///Set the tint color to apply to the navigation items and bar button items.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   Color? toolbarTopTintColor;
 
   ///Set to `true` to set the toolbar at the top translucent. The default value is `true`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   bool? toolbarTopTranslucent;
 
   ///Set to the custom transition style when presenting the WebView. The default value is [ModalTransitionStyle.COVER_VERTICAL].
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
+  ///- iOS WKWebView
   ModalTransitionStyle? transitionStyle;
 
   ///The window’s alpha value.
   ///The default value is `1.0`.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
-  ///- Windows
+  ///- macOS WKWebView
+  ///- Windows WebView2
   double? windowAlphaValue;
 
   ///Sets the origin and size of the window’s frame rectangle according to a given frame rectangle,
   ///thereby setting its position and size onscreen.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
-  ///- Windows
+  ///- macOS WKWebView
+  ///- Windows WebView2
   InAppWebViewRect? windowFrame;
 
   ///Flags that describe the window’s current style, such as if it’s resizable or in full-screen mode.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
+  ///- macOS WKWebView
   WindowStyleMask? windowStyleMask;
 
   ///The type of separator that the app displays between the title bar and content of a window.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS 11.0+
+  ///- macOS WKWebView 11.0+
   WindowTitlebarSeparatorStyle? windowTitlebarSeparatorStyle;
 
   ///How the browser window should be added to the main window.
   ///The default value is [WindowType.WINDOW].
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
-  ///- Windows
+  ///- macOS WKWebView
+  ///- Windows WebView2
   WindowType? windowType;
   InAppBrowserSettings(
       {this.allowGoBackWithBackButton = true,

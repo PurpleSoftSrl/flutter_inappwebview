@@ -12,7 +12,7 @@ part of 'webview_environment_settings.dart';
 ///may be overridden by values either specified in environment variables or in the registry.
 ///
 ///**Officially Supported Platforms/Implementations**:
-///- Windows
+///- Windows WebView2
 class WebViewEnvironmentSettings {
   ///If there are multiple switches, there should be a space in between them.
   ///The one exception is if multiple features are being enabled/disabled for a single switch,
@@ -20,14 +20,14 @@ class WebViewEnvironmentSettings {
   ///Example: `"--disable-features=feature1,feature2 --some-other-switch --do-something"`
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - ICoreWebView2EnvironmentOptions.put_AdditionalBrowserArguments](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_additionalbrowserarguments))
+  ///- Windows WebView2 ([Official API - ICoreWebView2EnvironmentOptions.put_AdditionalBrowserArguments](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_additionalbrowserarguments))
   final String? additionalBrowserArguments;
 
   ///This property is used to enable single sign on with Azure Active Directory (AAD)
   ///and personal Microsoft Account (MSA) resources inside WebView.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - ICoreWebView2EnvironmentOptions.put_AllowSingleSignOnUsingOSPrimaryAccount](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_allowsinglesignonusingosprimaryaccount))
+  ///- Windows WebView2 ([Official API - ICoreWebView2EnvironmentOptions.put_AllowSingleSignOnUsingOSPrimaryAccount](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_allowsinglesignonusingosprimaryaccount))
   final bool? allowSingleSignOnUsingOSPrimaryAccount;
 
   ///Use [browserExecutableFolder] to specify whether WebView2 controls use a fixed
@@ -47,25 +47,25 @@ class WebViewEnvironmentSettings {
   ///applicable `releaseChannelPreference` registry value is set to `1`, the channel search order is reversed.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - CreateCoreWebView2EnvironmentWithOptions.browserExecutableFolder](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl?view=webview2-1.0.2210.55#createcorewebview2environmentwithoptions))
+  ///- Windows WebView2 ([Official API - CreateCoreWebView2EnvironmentWithOptions.browserExecutableFolder](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl?view=webview2-1.0.2210.55#createcorewebview2environmentwithoptions))
   final String? browserExecutableFolder;
 
   ///Set the array of custom scheme registrations to be used.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - ICoreWebView2EnvironmentOptions4.SetCustomSchemeRegistrations](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions4?view=webview2-1.0.2739.15#setcustomschemeregistrations))
+  ///- Windows WebView2 ([Official API - ICoreWebView2EnvironmentOptions4.SetCustomSchemeRegistrations](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions4?view=webview2-1.0.2739.15#setcustomschemeregistrations))
   final List<CustomSchemeRegistration>? customSchemeRegistrations;
 
   ///The default display language for WebView.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - ICoreWebView2EnvironmentOptions.put_Language](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_language))
+  ///- Windows WebView2 ([Official API - ICoreWebView2EnvironmentOptions.put_Language](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_language))
   final String? language;
 
   ///Specifies the version of the WebView2 Runtime binaries required to be compatible with your app.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - ICoreWebView2EnvironmentOptions.put_TargetCompatibleBrowserVersion](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_targetcompatiblebrowserversion))
+  ///- Windows WebView2 ([Official API - ICoreWebView2EnvironmentOptions.put_TargetCompatibleBrowserVersion](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions?view=webview2-1.0.2210.55#put_targetcompatiblebrowserversion))
   final String? targetCompatibleBrowserVersion;
 
   ///You may specify the [userDataFolder] to change the default user data folder location for WebView2.
@@ -84,12 +84,12 @@ class WebViewEnvironmentSettings {
   ///running in the shared browser process.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows ([Official API - CreateCoreWebView2EnvironmentWithOptions.userDataFolder](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl?view=webview2-1.0.2210.55#createcorewebview2environmentwithoptions))
+  ///- Windows WebView2 ([Official API - CreateCoreWebView2EnvironmentWithOptions.userDataFolder](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl?view=webview2-1.0.2210.55#createcorewebview2environmentwithoptions))
   final String? userDataFolder;
 
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Windows
+  ///- Windows WebView2
   WebViewEnvironmentSettings(
       {this.additionalBrowserArguments,
       this.allowSingleSignOnUsingOSPrimaryAccount,
