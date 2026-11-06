@@ -20,13 +20,13 @@ class ClientCertChallenge extends URLAuthenticationChallenge {
   ///Returns the acceptable types of asymmetric keys.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView 21+ ([Official API - ClientCertRequest.getKeyTypes](https://developer.android.com/reference/android/webkit/ClientCertRequest#getKeyTypes()))
+  ///- Android WebView 21+ ([Official API - ClientCertRequest.getKeyTypes](https://developer.android.com/reference/android/webkit/ClientCertRequest#getKeyTypes()))
   List<String>? keyTypes;
 
   ///The acceptable certificate issuers for the certificate matching the private key.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView 21+ ([Official API - ClientCertRequest.getPrincipals](https://developer.android.com/reference/android/webkit/ClientCertRequest#getPrincipals()))
+  ///- Android WebView 21+ ([Official API - ClientCertRequest.getPrincipals](https://developer.android.com/reference/android/webkit/ClientCertRequest#getPrincipals()))
   List<String>? principals;
   ClientCertChallenge(
       {@Deprecated('Use keyTypes instead') this.androidKeyTypes,

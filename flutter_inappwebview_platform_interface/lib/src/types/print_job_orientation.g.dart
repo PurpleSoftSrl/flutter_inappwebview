@@ -19,8 +19,8 @@ class PrintJobOrientation {
   ///Pages are printed in landscape orientation.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
-  ///- MacOS
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   static final LANDSCAPE = PrintJobOrientation._internalMultiPlatform(1, () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:
@@ -36,8 +36,8 @@ class PrintJobOrientation {
   ///Pages are printed in portrait orientation.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
-  ///- MacOS
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   static final PORTRAIT = PrintJobOrientation._internalMultiPlatform(0, () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:

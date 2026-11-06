@@ -19,8 +19,8 @@ class PrintJobRenderingQuality {
   ///Renders the printing at the best possible quality, regardless of speed.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
-  ///- MacOS
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   static final BEST = PrintJobRenderingQuality._internalMultiPlatform(0, () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:
@@ -37,8 +37,8 @@ class PrintJobRenderingQuality {
   ///This option should be used only after establishing that best quality rendering does indeed make the user interface unresponsive.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- iOS
-  ///- MacOS
+  ///- iOS WKWebView
+  ///- macOS WKWebView
   static final RESPONSIVE =
       PrintJobRenderingQuality._internalMultiPlatform(1, () {
     switch (defaultTargetPlatform) {

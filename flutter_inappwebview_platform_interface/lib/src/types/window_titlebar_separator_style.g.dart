@@ -19,7 +19,7 @@ class WindowTitlebarSeparatorStyle {
   ///A style indicating that the system determines the type of separator.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
+  ///- macOS WKWebView
   static final AUTOMATIC =
       WindowTitlebarSeparatorStyle._internalMultiPlatform(0, () {
     switch (defaultTargetPlatform) {
@@ -34,7 +34,7 @@ class WindowTitlebarSeparatorStyle {
   ///A style indicating that there’s no title bar separator.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
+  ///- macOS WKWebView
   static final LINE =
       WindowTitlebarSeparatorStyle._internalMultiPlatform(2, () {
     switch (defaultTargetPlatform) {
@@ -49,7 +49,7 @@ class WindowTitlebarSeparatorStyle {
   ///A style indicating that the title bar separator is a line.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
+  ///- macOS WKWebView
   static final NONE =
       WindowTitlebarSeparatorStyle._internalMultiPlatform(1, () {
     switch (defaultTargetPlatform) {
@@ -64,7 +64,7 @@ class WindowTitlebarSeparatorStyle {
   ///A style indicating that the title bar separator is a shadow.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- MacOS
+  ///- macOS WKWebView
   static final SHADOW =
       WindowTitlebarSeparatorStyle._internalMultiPlatform(3, () {
     switch (defaultTargetPlatform) {

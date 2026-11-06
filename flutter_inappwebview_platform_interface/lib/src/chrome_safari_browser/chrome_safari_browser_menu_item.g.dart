@@ -8,11 +8,11 @@ part of 'chrome_safari_browser_menu_item.dart';
 
 ///Class that represents a custom menu item for a [PlatformChromeSafariBrowser] instance.
 ///
-///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
 ///
 ///**Officially Supported Platforms/Implementations**:
-///- Android native WebView
-///- iOS
+///- Android WebView
+///- iOS WKWebView
 class ChromeSafariBrowserMenuItem {
   ///Use onClick instead.
   @Deprecated('Use onClick instead')
@@ -31,11 +31,11 @@ class ChromeSafariBrowserMenuItem {
   void Function(WebUri?, String)? onClick;
 
   ///
-  ///**NOTE for Android native WebView**: Not available in an Android Trusted Web Activity.
+  ///**NOTE for Android WebView**: Not available in an Android Trusted Web Activity.
   ///
   ///**Officially Supported Platforms/Implementations**:
-  ///- Android native WebView
-  ///- iOS
+  ///- Android WebView
+  ///- iOS WKWebView
   ChromeSafariBrowserMenuItem(
       {required this.id,
       required this.label,
