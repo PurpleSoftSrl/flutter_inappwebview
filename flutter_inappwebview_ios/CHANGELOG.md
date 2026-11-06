@@ -1,3 +1,7 @@
+## 1.1.2+2
+
+- Use material_ui instead of the SDK Material library (Flutter 3.47).
+
 ## 1.1.2
 
 - Updated flutter_inappwebview_platform_interface version to ^1.3.0

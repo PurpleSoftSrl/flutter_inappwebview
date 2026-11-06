@@ -1,3 +1,7 @@
+## 1.1.3+3
+
+- Use material_ui instead of the SDK Material library (Flutter 3.47).
+
 ## 1.1.3+2
 
 - PurpleSoft fork of the stable 1.1.3: use proguard-android-optimize.txt, required by AGP 9.
