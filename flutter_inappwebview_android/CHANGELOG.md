@@ -1,4 +1,8 @@
-## 1.1.3+1\n\n- PurpleSoft fork of the stable 1.1.3: use proguard-android-optimize.txt, required by AGP 9.\n\n## 1.1.3
+## 1.1.3+2
+
+- PurpleSoft fork of the stable 1.1.3: use proguard-android-optimize.txt, required by AGP 9.
+
+## 1.1.3
 
 - Updated flutter_inappwebview_platform_interface version to ^1.3.0
 
